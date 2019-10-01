@@ -39,10 +39,10 @@ function makeGrid(){
     for (let i = 0; i < newRows; i++) {
         var row = table.insertRow(i);
         for (let y = 0; y < newColumns; y++) {
-          var cell=row.insertCell(y);
+          let cell=row.insertCell(y);
           cell.addEventListener('click',function(){
             var newColor=color.value
-            table.rows[i].cells[y].style.backgroundColor = newColor;
+            cell.style.backgroundColor = newColor;
           })
     }}
 }
